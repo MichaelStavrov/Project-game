@@ -5,7 +5,9 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].bundle.js',
+    clean: true,
+    assetModuleFilename: '[name][ext]',
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
